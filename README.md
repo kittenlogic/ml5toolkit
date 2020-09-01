@@ -1,6 +1,6 @@
 # DIY AI: ML5 Community Starter Kit
 
-A beginner's guide to machine learning and making text-generating AI bots that center the needs of communities interested in working with their own texts, archives, and “small data”.
+A beginner's guide to machine learning and making text-generating AI bots. Centering the needs of communities interested in working with their own texts, archives, and “small data”.
 
 
 ## About
