@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>DIY AI: ML5 Community Starter Toolkit</title>
+    <meta charSet="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="ML community toolkit that teaches beginners how to create text-generating AI bots, with special consideration for the needs of marginalized communities interested in working with their own texts, archives, and “small data”.">
+    <meta property="og:image" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:900" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .launchaco-promo {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        z-index: 999999;
+      }
+
+      .launchaco-promo__active {
+        width: initial;
+        height: initial;
+      }
+
+      .launchaco-promo-speechbubble {
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+        position: absolute;
+        left: 50px;
+        top: -11px;
+        padding: 9px;
+        color: white;
+        border-radius: 3px;
+        background: linear-gradient(#227ef7, #1290fc);
+        font-size: 14px;
+        font-weight: 600;
+        width: 93px;
+        box-sizing: border-box;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .15s ease-in-out;
+      }
+
+      .launchaco-promo__active:hover .launchaco-promo-speechbubble {
+        opacity: 1;
+      }
+
+      .launchaco-promo svg {
+        transition: all .3s ease-in-out;
+        opacity: 0;
+      }
+
+      .launchaco-promo__active svg {
+        opacity: 1;
+      }
+
+      .launchaco-promo-speechbubble:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        left: -4px;
+        bottom: 10px;
+        border-radius: 3px;
+        background: #1290fc;
+        z-index: 2;
+        position: absolute
+      }
+
+      .launchaco-promo__active .launchaco-promo-speechbubble__animate {
+        animation: popinpopup 3s linear forwards 0.1s;
+      }
+
+      @keyframes popinpopup {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 3px, 0)
+        }
+
+        7%,
+        93% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0)
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate3d(0, -4px, 0)
+        }
+      }
+
+      .launchaco-promo-animate:hover {
+        opacity: 1 !important;
+      }
+      .faq a {
+          border-bottom: 1px solid #fff8f8;
+      }
+      .header .nav-link:last-of-type {
+          margin-right: 0;
+          font-size: 3em;
+      }
+    </style>
+
+
+
+  </head>
+
+  <body class="font-hacker">
+    <div class="fuschia-gradient">
+      <!---->
+      <header class="header">
+        <div class="container-lrg">
+          <div class="flex col-12 spread"><a class="logo primary-color launchaco-builder-hoverable logo">ML5 Toolkit</a> <a href="mailto:queermachines@gmail.com" class="nav-link secondary-color mr0">💌</a></div>
+        </div>
+      </header>
+      <section class="section">
+        <div class="container mb40">
+          <div class="col-12 text-center">
+            <h1 class="heading primary-color launchaco-builder-hoverable">DIY AI: ML5 Community Starter Kit</h1>
+            <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">A machine learning toolkit that teaches beginners how to create text-generating AI bots, with special consideration for the needs of marginalized communities interested in working with their own texts, archives, and “small data”.
+            </h2>
+            <div class="mt40">
+              <form action="https://queer.us17.list-manage.com/subscribe/post?u=a08809da261e988a6bb3ba332&amp;id=f8df02ce33" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address" required="required" class="mailchimp-input mobile-text-center">
+                <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8" tabindex="-1" value=""></div> <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="white-color button no-max-width accent-bg primary-color" value="Get Early Access">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="container mt75">
+          <div class="col-12">
+            <div class="codeblock">
+              <pre><code class="hljs python"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-keyword">import</span> machinelearnntoolkit</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">codingtutorials</span><span class="hljs-params">(🐬)</span>:</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-string">'build a poetry bot with ML5 and charRNN)'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-string">'build a chatbot with GPT2 and Runway ML)'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">webscrapingtutorials</span><span class="hljs-params">(🐬)</span>:</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-string">'create your own datasets using simple web scrapers–</span><br/><span class="hljs-string">    no coding knowledge required'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">datasettutorials</span><span class="hljs-params">(🐬)</span>:</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-string">'ethical guidelines and resources for working with datasets–</span><br/><span class="hljs-string">    finding, vetting, cleaning, documenting'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">glossary</span><span class="hljs-params">(🐬)</span>:</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-string">'list of terms demystifying machine learning jargon and tools,</span><br/><span class="hljs-string">    like tensorflow, seq2seq, word2vec, etc'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">visualaids</span><span class="hljs-params">(🐬)</span>:</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-string">'cute simple diagrams illustrating how language models work</span><br/><span class="hljs-string">    (RNNs, CNNs, LSTMs, GPT-2, BERT, etc.)'</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"> </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">resources</span><span class="hljs-params">(🐬)</span>:</span></div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    <span class="hljs-string">'compiling and amplifying complimentary ML guides and tools</span><br/><span class="hljs-string">    by other amazing 🐚👁🐍 beings'</span></div></td></tr></tbody></table></code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section id="faq-1" class="section fuschia-black" sitemeta="[object Object]" activepage="Landing">
+
+      <div class="container">
+        <div class="col-12 mt40">
+          <div class="faq pad20"><b class="bold primary-color launchaco-builder-hoverable">
+              Who made this?
+            </b>
+            <p class="paragraph secondary-color launchaco-builder-hoverable">
+              This project was initiated by Emily Martinez, as part of her ML5.js Fellowship, under the mentorship of <a href="https://www.lydiajessup.me/">Lydia Jessup</a> and <a href="https://shiffman.net/">Dan Shiffman</a>.
+              <br/><br/>
+              Emily is one of four <a href="https://processingfoundation.org/fellowships">ML5.js Fellows</a> for 2020, a partnership between Processing Foundation and NYU’s <a href="https://tisch.nyu.edu/itp">Interactive Telecommunications Program</a> that specifically focuses on <a href="https://ml5js.org/">ml5.js</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <footer id="footer-2" class="section text-center fuschia-black" sitemeta="[object Object]" activepage="Landing">
+      <div class="container col-12">
+        <!---->
+        <div><a href="https://twitter.com/queermachines" target="_blank" class="socialicons accent-bg twitter"></a><a href="https://instagram.com/queerai" target="_blank" class="socialicons accent-bg instagram"></a><a href="mailto:queermachines@gmail.com" class="socialicons accent-bg email"></a></div>
+        <!---->
+      </div>
+    </footer>
+
+
+  </body>
+
+  <!-- <script>
+    window.onscroll = function()
+    {
+      showAd()
+    }
+
+    function showAd()
+    {
+      var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
+
+      // At specifiv position do what you want
+      if (scrollBarPosition > 300)
+      {
+        document.getElementById("visual-dreamer").className = "launchaco-promo launchaco-promo__active";
+        window.onscroll = function() {};
+      }
+    }
+  </script> -->
+
+</html>
